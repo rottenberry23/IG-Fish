@@ -19,7 +19,7 @@ const db = getFirestore(app);
 // Function to create or update a document in the "credentials" collection
 async function addCredential(username, password) {
   try {
-    // Reference to the "credentials" collection and document
+    // Reference to the document with the username as the ID
     const credDocRef = doc(collection(db, "credentials"), username);
 
     // Check if the document already exists
